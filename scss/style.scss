@@ -1,0 +1,280 @@
+// ШРИФТ
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+// ОБНУЛЕНИЕ СТИЛЕЙ
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul,
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+label {
+  cursor: pointer;
+}
+legend {
+  display: block;
+}
+// ОСНОВНЫЕ СТИЛИ
+body,
+html {
+  height: 100%;
+}
+body {
+  background: url("/img/background.jpg") 0 100% / cover no-repeat;
+  font-family: "Roboto";
+  color: #303030;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 20px 100px;
+}
+.header {
+}
+.main {
+  flex: 1 1 auto;
+}
+.footer {
+}
+// HEADER
+.menu {
+  display: flex;
+  column-gap: 140px;
+  margin: 0px 0px 20px 0px;
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-start;
+    font-weight: 500;
+    column-gap: 30px;
+  }
+  &__link {
+    transition: all 0.3s ease 0s;
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #303030;
+    cursor: pointer;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #303030;
+      }
+    }
+    transform: skew(30deg);
+    a {
+      transform: skew(-30deg);
+      padding: 5px 30px;
+      color: #303030;
+      @media (any-hover: hover) {
+        &:hover {
+          transition: color 0.3s ease 0s;
+          color: #f2f3f5;
+        }
+      }
+    }
+  }
+}
+.logo-menu {
+  &__image {
+    max-width: 70px;
+    min-width: 70px;
+  }
+}
+// MAIN
+.hero {
+  &__title {
+    text-transform: uppercase;
+    font-size: 53px;
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 120px;
+    margin: -20px 0px 0px 0px;
+  }
+}
+.message {
+  display: flex;
+  column-gap: 50px;
+  margin: 0px 0px 70px 0px;
+  &__img {
+    width: 110px;
+  }
+  &__text {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  span {
+    color: #ec1f26;
+  }
+}
+.about {
+  &__title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0px 0px 10px 0px;
+  }
+  &__text {
+    font-size: 12px;
+    max-width: 400px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__button {
+    transition: all 0.2s ease 0s;
+    background-color: #303030;
+    color: #f2f3f5;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    @media (any-hover: hover) {
+      &:hover {
+        padding: 8px 13px;
+        margin: -3px;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+// FOOTER
+.contacts {
+  display: inline-flex;
+  margin: 0px 0px 30px 470px;
+  &__logo {
+    margin: 0px 30px 0px 0px;
+  }
+  &__img {
+    width: 50px;
+  }
+  &__text {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    span {
+      color: #ec1f26;
+    }
+  }
+  .text-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0px 50px 0px 0px;
+    &__number {
+      font-size: 22px;
+    }
+  }
+  &__links {
+    a {
+      transition: all 0.3s ease 0s;
+      color: #303030;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #666666;
+        }
+      }
+    }
+    margin: 0px 0px 3px 0px;
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+.social {
+  display: flex;
+  margin: 0px 0px 15px 40px;
+  column-gap: 20px;
+  img {
+    width: 12px;
+    height: 12px;
+  }
+}
